@@ -13,37 +13,45 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
-PROJECT_NAME_FULL: str = None
+PROJECT_NAME: str = "CODEBRIM"
+PROJECT_NAME_FULL: str = "CODEBRIM: COncrete DEfect BRidge IMage Dataset"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = None
-APPLICATIONS: List[Union[Industry, Domain, Research]] = None
-CATEGORY: Category = None
+LICENSE: License = License.Custom(
+    url="https://zenodo.org/record/2620293/files/license.md?download=1", redistributable=False
+)
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Construction()]
+CATEGORY: Category = Category.Construction()
 
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+CV_TASKS: List[CVTask] = [CVTask.ObjectDetection()]
+ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.ObjectDetection()]
 
-RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
+RELEASE_DATE: Optional[str] = "2019-04-01"  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
     RELEASE_YEAR: int = None
 
-HOMEPAGE_URL: str = None
+HOMEPAGE_URL: str = "https://zenodo.org/record/2620293#.YkWyDH9Bzmg"
 # e.g. "https://some.com/dataset/homepage"
 
 PREVIEW_IMAGE_ID: int = None
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = None
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = {
+    "CODEBRIM_classification_balanced_dataset.zip": "https://zenodo.org/record/2620293/files/CODEBRIM_classification_balanced_dataset.zip?download=1",
+    "CODEBRIM_classification_dataset.zip": "https://zenodo.org/record/2620293/files/CODEBRIM_classification_dataset.zip?download=1",
+    "CODEBRIM_cropped_dataset.zip": "https://zenodo.org/record/2620293/files/CODEBRIM_cropped_dataset.zip?download=1",
+    "CODEBRIM_original_images.zip": "https://zenodo.org/record/2620293/files/CODEBRIM_original_images.zip?download=1",
+    "license.md": "license.md",
+}
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -51,15 +59,29 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = None
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = "https://arxiv.org/abs/1904.08486"
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
+REPOSITORY: Optional[
+    Union[str, List[str], Dict[str, str]]
+] = "https://github.com/ccc-frankfurt/meta-learning-CODEBRIM"
 
-CITATION_URL: Optional[str] = None
-AUTHORS: Optional[List[str]] = None
+CITATION_URL: Optional[str] = "https://zenodo.org/record/2620293/export/hx"
+AUTHORS: Optional[List[str]] = [
+    "Martin Mundt",
+    "Sagnik Majumder",
+    "Sreenivas Murali",
+    "Panagiotis Panetsos",
+    "Visvanathan Ramesh",
+]
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
-ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = [
+    "Goethe University, Germany",
+    "Egnatia Odos A. E., Greece",
+]
+ORGANIZATION_URL: Optional[Union[str, List[str]]] = [
+    "https://www.goethe-university-frankfurt.de/",
+    "https://www.egnatia.eu/",
+]
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
