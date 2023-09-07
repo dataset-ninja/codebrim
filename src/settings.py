@@ -39,7 +39,7 @@ HOMEPAGE_URL: str = "https://zenodo.org/record/2620293#.YkWyDH9Bzmg"
 PREVIEW_IMAGE_ID: int = 3292511
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = "https://github.com/dataset-ninja/"
+GITHUB_URL: str = "https://github.com/dataset-ninja/codebrim"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
