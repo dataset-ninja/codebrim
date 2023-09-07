@@ -98,7 +98,7 @@ def convert_and_upload_supervisely_project(
     }
 
     tag_meta = sly.TagMeta(
-        "overlapping", sly.TagValueType.ONEOF_STRING, possible_values=["True", "False"]
+        "duplicate bbox", sly.TagValueType.ONEOF_STRING, possible_values=["True", "False"]
     )
 
     project = api.project.create(workspace_id, project_name, change_name_if_conflict=True)

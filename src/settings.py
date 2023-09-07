@@ -92,7 +92,7 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = [
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
-    "__PRETEXT__": "Additionally, bounding boxes with 2 or more classes are marked as ***overlapping***. Run dataset in supervisely to learn more"
+    "__PRETEXT__": "Additionally, bounding boxes with 2 or more classes are marked as ***duplicate bbox***. Run dataset in supervisely to explore"
 }
 TAGS: Optional[List[str]] = None
 
