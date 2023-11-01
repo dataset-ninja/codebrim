@@ -70,7 +70,7 @@ PAPER: Optional[Union[str, List[str], Dict[str, str]]] = "https://arxiv.org/abs/
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
 REPOSITORY: Optional[
     Union[str, List[str], Dict[str, str]]
-] = "https://github.com/ccc-frankfurt/meta-learning-CODEBRIM"
+] = {"GitHub":"https://github.com/ccc-frankfurt/meta-learning-CODEBRIM"} 
 
 CITATION_URL: Optional[str] = "https://zenodo.org/record/2620293/export/hx"
 AUTHORS: Optional[List[str]] = [
